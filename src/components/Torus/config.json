@@ -1,0 +1,6 @@
+{
+	"radius": 1.2,
+	"tubeDiameter": 0.2,
+	"radialSegments": 50,
+	"tubularSegments": 100
+}
