@@ -3,6 +3,7 @@ import Cube from './components/cube/Cube';
 import * as conf from './config/game.json';
 import { IElements } from './components/interfaces/IGame';
 import Torus from './components/Torus/Torus';
+import Sphere from './components/sphere/Sphere';
 
 export default class Game {
 	private readonly camera: PerspectiveCamera;
@@ -26,6 +27,7 @@ export default class Game {
 		this.spotLights = this.addLights();
 
 		this.elements.cube = new Cube(this.scene);
+		this.elements.sphere = new Sphere(this.scene);
 		this.elements.torus = new Torus(this.scene);
 
 		this.renderer = new WebGLRenderer({ antialias: true });

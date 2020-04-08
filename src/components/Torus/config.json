@@ -2,5 +2,9 @@
 	"radius": 1.2,
 	"tubeDiameter": 0.2,
 	"radialSegments": 50,
-	"tubularSegments": 100
+	"tubularSegments": 100,
+	"x": 0,
+	"y": 0,
+	"z": 0,
+	"rotationX": 0.02
 }

@@ -7,13 +7,11 @@ export default class Cube extends BaseComponent {
 	private material: Material;
 
 	constructor(scene: Scene) {
-		super(scene);
+		super(scene, conf);
 
 		this.geometry = new BoxGeometry(conf.width, conf.height, conf.depth);
 		this.material = new MeshNormalMaterial();
 
-		super.init(this.geometry, this.material);
-		this.rotationX = -0.01;
-		this.rotationY = -0.02;
+		this.init(this.geometry, this.material);
 	}
 }

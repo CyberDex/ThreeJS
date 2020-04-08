@@ -1,5 +1,8 @@
 {
 	"radius": 0.5,
-	"widthSegments": 0,
-	"heightSegments": 0
+	"widthSegments": 50,
+	"heightSegments": 50,
+	"x": 0,
+	"y": 0,
+	"z": 0
 }

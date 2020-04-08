@@ -7,7 +7,7 @@ export default class Sphere extends BaseComponent {
 	private material: Material;
 
 	constructor(scene: Scene) {
-		super(scene);
+		super(scene, conf);
 
 		this.geometry = new SphereGeometry(conf.radius, conf.widthSegments, conf.heightSegments);
 		this.material = new MeshNormalMaterial();

@@ -7,7 +7,7 @@ export default class Torus extends BaseComponent {
 	private material: Material;
 
 	constructor(scene: Scene) {
-		super(scene);
+		super(scene, conf);
 
 		this.geometry = new TorusGeometry(conf.radius, conf.tubeDiameter, conf.radialSegments, conf.tubularSegments);
 		this.material = new MeshPhongMaterial({
@@ -16,6 +16,5 @@ export default class Torus extends BaseComponent {
 		});
 
 		this.init(this.geometry, this.material);
-		this.rotationX = 0.02;
 	}
 }
