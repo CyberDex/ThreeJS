@@ -1,4 +1,4 @@
-import { PerspectiveCamera, WebGLRenderer, Scene, SpotLight } from 'Three';
+import { PerspectiveCamera, WebGLRenderer, Scene, SpotLight, Object3D } from 'Three';
 import Cube from './components/cube/Cube';
 import * as conf from './config/game.json';
 import { IElements } from './components/interfaces/IGame';
@@ -10,6 +10,7 @@ export default class Game {
 	private readonly scene: Scene;
 	private readonly renderer: WebGLRenderer;
 	private readonly spotLights: SpotLight[];
+	private parent: Object3D;
 
 	private elements: IElements = {};
 
@@ -22,7 +23,7 @@ export default class Game {
 		this.camera.position.x = conf.camera.position.x;
 		this.camera.position.y = conf.camera.position.y;
 		this.camera.position.z = conf.camera.position.z;
-
+		
 		this.scene = new Scene();
 		this.spotLights = this.addLights();
 
@@ -30,6 +31,25 @@ export default class Game {
 		this.elements.sphere = new Sphere(this.scene);
 		this.elements.torus = new Torus(this.scene);
 
+		// const pitchObject = new Object3D();
+		// this.scene.add( pitchObject );
+
+		// const yawObject = new Object3D();
+		// yawObject.position.y = 10;
+		// yawObject.add( this.elements.cube.mesh );
+
+		// document.addEventListener( 'mousemove', event => {
+		// 	yawObject.rotation.y -= event.movementX * 0.002;
+		// 	pitchObject.rotation.x -= event.movementY * 0.002;
+		// 	pitchObject.rotation.x = Math.max( - Math.PI / 2, Math.min( Math.PI / 2, pitchObject.rotation.x ) );
+		// }, false );
+
+		// this.parent = new Object3D();
+		// this.parent.add( this.camera );
+		// this.parent.add( this.elements.cube.mesh );
+		// this.parent.add( this.elements.sphere.mesh );
+		// this.parent.add( this.elements.torus.mesh );
+		
 		this.renderer = new WebGLRenderer({ antialias: true });
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
 		document.body.appendChild(this.renderer.domElement);

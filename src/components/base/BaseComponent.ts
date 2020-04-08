@@ -21,6 +21,10 @@ export default class BaseComponent {
 	public init(geometry: Geometry, material: Material) {
 		this.mesh = new Mesh(geometry, material);
 		this.scene.add(this.mesh);
+
+		this.mesh.castShadow = true;
+		this.mesh.receiveShadow = true;
+		
 		this.render();
 	}
 
