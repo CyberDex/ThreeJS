@@ -36,7 +36,7 @@ export default class Game {
 	}
 
 	private addLights(): SpotLight[] {
-		return [this.addLight(), this.addLight(0xffffff, -200, -200, -200)];
+		return [this.addLight(0xeeeece, 1000, 1000, 1000), this.addLight(0xffffff, -200, -200, -200)];
 	}
 
 	private addLight(colour: number, x: number, y: number, z: number): SpotLight {

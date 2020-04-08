@@ -1,8 +1,7 @@
 {
     "title": "Webpack",
     "entryPoint": {
-        "main": "./src/main.ts",
-        "preloader": "./src/preloader.ts"
+        "main": "./src/main.ts"
     },
     "sourceFolder": "./src",
     "assetsFolder": "./assets",
